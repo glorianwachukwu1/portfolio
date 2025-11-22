@@ -1514,6 +1514,124 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
+
+
+
+
+#RESEARCH
+\*-----------------------------------*/
+
+.research-posts { margin-bottom: 10px; }
+
+.research-posts-list {
+  gap: 20px;
+}
+
+.research-post-item > a {
+  display: flex;
+  position: relative;
+  background: var(--border-gradient-onyx);
+  height: 100%;
+  box-shadow: var(--shadow-4);
+  border-radius: 16px;
+  z-index: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.research-post-item > a::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--eerie-black-1);
+  z-index: -1;
+}
+
+.research-content {
+  display: flex;
+  flex: 1;
+  padding: 10px;
+  flex-direction: column;
+}
+
+/* .research-banner-box {
+  width: 100px; 
+  height: 20px; 
+  border-radius: 12px;
+  overflow: hidden;
+  padding-top: 30px;
+}
+
+.research-banner-box img {
+  width: 100%; 
+  height: auto;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: var(--transition-1); 
+} */
+
+.research-banner-box {
+  width: 100%; /* Adjust width to fill the container */
+  max-width: 100px; /* Set maximum width to prevent images from becoming too large */
+  height: auto; /* Automatically adjust height based on image aspect ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative; /* Position relative to allow absolute positioning of the image */
+}
+
+.research-banner-box img {
+  position: absolute; /* Position the image absolutely within the container */
+  top: 14%; /* Position the image at the top of the container */
+  left: 5%; /* Position the image at the left of the container */
+  width: 100%; /* Ensure the image fills the container */
+  height: auto; /* Automatically adjust height based on image aspect ratio */
+  object-fit: cover; /* Scale the image to cover the entire container */
+  transition: var(--transition-1);
+}
+
+
+
+.research-post-item > a:hover .research-banner-box img { transform: scale(1.1); }
+
+.research-meta {
+  display: flex;
+  gap: 7px;
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  margin-bottom: 5px;
+}
+
+.research-meta .dot {
+  margin-top: 6px;
+  background: var(--light-gray-70);
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.research-item-title {
+  margin-bottom: 10px;
+  line-height: 1.3;
+  transition: var(--transition-1);
+}
+
+.research-post-item > a:hover .research-item-title { color: var(--orange-yellow-crayola); }
+
+.research-text {
+  color: var(--light-gray);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
+
+	
+
   /**
    * #CONTACT
    */
